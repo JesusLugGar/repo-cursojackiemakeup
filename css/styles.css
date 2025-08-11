@@ -1,0 +1,283 @@
+/* forma de crear comentarios.
+En CSS, se va a crear un SELECTOR a ese se le va a dar una PROPIEDAD y esta un VALOR.
+
+La forma de hacer esto es la siguiente:
+
+selector { <-- el selector es un elemento del HTML es decir alguna etiqueta
+propiedad: valor  -> la propiedad es un atributo como por ejemplo el color tamaño y luego de los : lo q le vas asignar a esa propiedad
+
+}
+
+*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400&display=swap');
+
+
+/**---------------------- selectores que van a ir aplicados  todos los html linealmente --------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;/*saca los bullets de la lista*/
+}
+
+li > a {  /*aplica a todos los items dentro de la lista*/
+    color: black;
+    text-decoration: none; /*sin subrayado en los enlaces*/
+    font-size: 16px;
+    
+}
+
+body { /*letras que elegi para todos los html y dentro del body*/
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* tamaño del logo**/
+.logo {
+    width: 115px;
+    height: auto;
+    background-color: #f8f0f4;
+    border-radius: 90%;
+    padding: 1px;
+}
+
+.logo img {
+    width: 100%;
+}
+
+/*configuraciones del menu*/
+header {
+    display: flex;
+    justify-content: space-between; /* mejor que flex-end + gap */
+    align-items: center;
+    position: sticky;
+    top: 0;
+    padding: 0px 20px; /* más margen a los lados */
+    background-color: #f5f5f5;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    z-index: 10;
+}
+
+nav {
+    width: 45%;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    gap: 10%;
+    font-weight: bold;  
+    
+}
+
+/*.fa-sm {
+    font-size: 30px;
+}*/
+
+/*** --------------  INDEX -------------*/
+h1, h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #444444;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-top: 40px;
+}
+
+/*probando especifidad con el titulo, lo encontre en internet estas, igual no me gusto mucho*/
+.titulo_index {
+    font-size: 48px;
+  background: linear-gradient(to right, #c65f87);
+  background-clip: text;              /* estándar (algunos navegadores la ignoran) */
+  -webkit-background-clip: text;      /* compatible con Chrome/Safari */
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+
+}
+
+.imagenes_index {
+    display: flex;
+    justify-content: center; /* con este selector puedo centrar las imagenes Horizontalmente*/
+    align-items: center;/** este tambien las centra la diferencia con el de arriba es que que las centra verticalmente si es que hay altura*/
+    gap: 20px;          /* el espacio entre las imagennes*/
+    flex-wrap: wrap;    /* este selector es para que se acomoden en pantallas pequeñas */
+    padding: 50px;
+
+}
+
+.imagenes_index img {
+    width: 50%; /* como las coloque arriba en un contenedor estas ocuparan el 30% o lo que le quiera colcoar*/
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px; /* coloca el borde de la imagen un poco redonda*/
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.555); /*este esta muy bueno le da sombra y como que esta sobre el aire */
+
+
+
+}
+
+
+/*-------------------- SOMRE MI HTML  ------------ ---*/
+.sobreMi {
+    text-align: justify;
+    line-height: 1.6; /*esto para dejar espacio entre linea tipo word*/
+    
+}
+
+.firma {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.3rem;
+  font-style: italic;
+}
+
+
+
+/*----------- CURSOS -----------*/
+
+/* parte GRID */
+.gridArea {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
+  gap: 80px; /* espacio entre los recuadros */
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto; 
+}
+
+/* aca trabajare cada cuadro que le llame .CURSO */
+.curso {
+  border: 1px solid #1e3a8a;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1); /*este lo use en las imagenes de index*/
+  transition: transform 0.2s ease;
+}
+
+.curso img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+
+}
+
+.botonver {
+  display: block;
+  width:90%;           /* Que ocupe casi todo el ancho */
+  margin: 10px auto;    /* Centrar horizontalmente y separar un poco */
+  padding: 10px;        /* Espaciado interno del botón */
+  background-color: black;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  /*border-radius: 5px;*/
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.botonver:hover {
+  background-color: rgba(0, 0, 0, 0.6)
+}
+
+.curso h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #444444;
+    font-size: 1.25rem;
+    
+    font-style: italic;
+
+}
+
+.parrafo p {
+    display: flex;
+    text-align: left;
+    font-size: 16px;
+    justify-content: space-between;
+    line-height: 2.6;
+    margin: 10px 0;
+    
+
+}
+
+
+
+/** ------------- DETALLE CURSO -----------------------*/
+
+.parrafoCurso {
+    display: flex;
+    text-align: justify;
+    line-height: 1.5;
+    margin: 50px 0;
+}
+
+.certificado:hover {
+    transform: scale(1.07); /* con este creo un efecto, lo encontre internet y luego la profe lo explico*/
+}
+
+
+/*---------------------CARRO DE COMPRAS -------------*/
+
+.terminosCondiciones {
+    font-size: small;
+    text-align: center;
+}
+
+.negrita {
+    font-weight: bold;
+    text-decoration: underline;
+    
+}
+
+/*------------------ FOOTER---------------------------*/
+
+
+footer {
+    position: relative; 
+    
+}
+
+footer img {
+    position: absolute;
+    /*top: 0;*/
+    left: 45%;
+    transform: translateX(-50%);
+    width: 50%; 
+    opacity: 0.3;  /* Menos opaco, más sutil */
+    filter: blur(1px);
+    z-index: 0;
+   
+}
+
+.footerRedes, .footer-center {
+    position: relative;
+    z-index: 1;
+}
+
+.footerRedes {
+    margin: 10px auto;
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 20%;
+}
+
+.fa-brands {
+    font-size: 20px;
+}
+
+.footer-center {
+    text-align: center;
+}
