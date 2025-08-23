@@ -19,103 +19,169 @@
 
 <body>
 
-    <header class="bg-light py-3 border-bottom">
+    <header class="navbar navbar-expand-md bg-light border-bottom">
         <div class="container d-flex justify-content-between aling-items-center">
             <a href="../index.html">
                 <img src="../assets/img/logo.png" alt="logoJQ" height="70">
             </a>
         </div>
 
-        <!-- solo icono del menu collapse, no entendi como hacerlo funcionar -->
-        <div class="d-block d-md-none">
-            <i class="fa-solid fa-bars fa-2x text-dark"></i>
-        </div>
+        <!-- menu hamburguesa -->
+        <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <nav class="d-none d-md-block">
-            <ul class="nav nav-tabs justify-content-center align-items-center gap-1 flex-nowrap px-2">
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto nav nav-tabs align-items-center align-items-md-center gap-1 flex-nowrap px-2">
                 <li class="nav-item"><a class="nav-link text-dark" href="../index.html">Inicio</a></li>
                 <li class="nav-item"><a class="nav-link active text-dark" href="./cursos.html">Cursos</a></li>
-                <li class="nav-item"><a class="nav-link text-dark" href="./detalleCursos.html">Detalle Cursos</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="./detalleCursos.html">Detalle Cursos</a>
+                </li>
                 <li class="nav-item"><a class="nav-link text-dark" href="./sobreMi.html">Sobre Mi</a></li>
                 <li class="nav-item"><a class="nav-link text-dark" href="./carrito.html"><i
                             class="fa-solid fa-cart-shopping fa-sm"></i></a></li>
             </ul>
-        </nav>
+        </div>
     </header>
-    <main>
-        <h1>Cursos Disponibles</h1>
-        <p class="text-center mb-5 fs-5">Aprende con nosotros el Arte del Maquillaje</p>
-        <section class="gridArea">
 
-            <div class="curso">
-                <h2>Curso Auto Maquillaje</h2>
-                <img src="../assets/img/automaquillaje.jpg" alt="Jackie automaquillaje">
-                <div class="parrafo">
-                    <p>Duracion: 3 Semanas</p>
-                    <p>Dificultad: Principiante</p>
-                    <p>Precio: $36,00 USD</p>
-                </div>
+<main class="container py-5">
+  <h1 class="text-center mb-2">Cursos Disponibles</h1>
+  <p class="text-center mb-4 fs-5">Aprende con nosotros el Arte del Maquillaje</p>
 
-                <a class="botonver" href="./detalleCursos.html">Ver Curso</a>
+  <section>
+    <!-- 1 col en móvil, 2 en sm, 3 en lg, 4 en xl -->
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4">
+
+      <!-- curso 1 -->
+      <div class="col">
+        <article class="card h-100 shadow-sm">
+          <div class="ratio ratio-4x3">
+            <img src="../assets/img/automaquillaje.jpg"
+                 alt="Jackie automaquillaje"
+                 class="w-100 h-100 object-fit-cover" loading="lazy">
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h2 class="fs-5">Curso Auto Maquillaje</h2>
+            <ul class="list-unstyled small text-body-secondary mb-3">
+              <li><strong>Duración:</strong> 3 semanas</li>
+              <li><strong>Dificultad:</strong> Principiante</li>
+              <li><strong>Precio:</strong> $36,00 USD</li>
+            </ul>
+            <a class="btn btn-dark mt-auto" href="./detalleCursos.html">Ver Curso</a>
+          </div>
+        </article>
+      </div>
+
+      <!-- curso 2 -->
+      <div class="col">
+        <article class="card h-100 shadow-sm">
+          <div class="ratio ratio-4x3">
+            <img src="../assets/img/maquillaje_novia.jpg"
+                 alt="Maquillaje novia"
+                 class="w-100 h-100 object-fit-cover" loading="lazy">
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h2 class="fs-5">Curso Maquillaje para Novia</h2>
+            <ul class="list-unstyled small text-body-secondary mb-3">
+              <li><strong>Duración:</strong> 4 semanas</li>
+              <li><strong>Dificultad:</strong> Intermedio</li>
+              <li><strong>Precio:</strong> $45,00 USD</li>
+            </ul>
+            <a class="btn btn-dark mt-auto" href="./detalleCursos.html">Ver Curso</a>
+          </div>
+        </article>
+      </div>
+
+      <!-- curso 3 -->
+      <div class="col">
+        <article class="card h-100 shadow-sm">
+          <div class="ratio ratio-4x3">
+            <img src="../assets/img/avanzado.jpeg"
+                 alt="Maquillaje avanzado"
+                 class="w-100 h-100 object-fit-cover" loading="lazy">
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h2 class="fs-5">Curso Maquillaje Avanzado</h2>
+            <ul class="list-unstyled small text-body-secondary mb-3">
+              <li><strong>Duración:</strong> 5 semanas</li>
+              <li><strong>Dificultad:</strong> Intermedio</li>
+              <li><strong>Precio:</strong> $50,00 USD</li>
+            </ul>
+            <a class="btn btn-dark mt-auto" href="./detalleCursos.html">Ver Curso</a>
+          </div>
+        </article>
+      </div>
+
+      <!-- curso 4 -->
+      <div class="col">
+        <article class="card h-100 shadow-sm">
+          <div class="ratio ratio-4x3">
+            <img src="../assets/img/colorimetria-img.jpg"
+                 alt="Curso de colorimetría"
+                 class="w-100 h-100 object-fit-cover" loading="lazy">
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h2 class="fs-5">Curso Colorimetría</h2>
+            <ul class="list-unstyled small text-body-secondary mb-3">
+              <li><strong>Duración:</strong> 6 semanas</li>
+              <li><strong>Dificultad:</strong> Intermedio</li>
+              <li><strong>Precio:</strong> $60,00 USD</li>
+            </ul>
+            <a class="btn btn-dark mt-auto" href="./detalleCursos.html">Ver Curso</a>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+
+    <footer class="bg-light border-top py-4">
+      <div class="container">
+        <div class="row align-items-center gy-3">
+          <div class="col-12 col-md-4">
+            <div class="d-flex gap-4 fs-4">
+              <a
+                href="https://www.instagram.com/jackiemakeup94?igsh=NzVmYTMzNGpwZTBn"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                class="text-dark"
+                ><i class="fa-brands fa-instagram"></i></a>
+              <a
+                href="https://www.youtube.com/@jackiemakeup94"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+                class="text-dark"
+                ><i class="fa-brands fa-youtube"></i></a>
+              <a
+                href="https://www.tiktok.com/@soyjackiemakeup?lang=es&is_from_webapp=1&sender_device=mobile&sender_web_id=7350078536651130374"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="TikTok"
+                class="text-dark"
+                ><i class="fa-brands fa-tiktok"></i></a>
+              <a
+                href="https://www.threads.net/@jackiemakeup94"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Threads"
+                class="text-dark"
+                ><i class="fa-brands fa-threads"></i></a>
             </div>
-            <div class="curso">
-                <h2>Curso Maquillaje para Novia</h2>
-                <img src="../assets/img/maquillaje_novia.jpg" alt="Maquillaje Novia">
+          </div>
 
-                <div class="parrafo">
-                    <p>Duracion: 4 Semanas</p>
-                    <p>Dificultad: Intermedio</p>
-                    <p>Precio: $45,00 USD</p>
-                </div>
-
-                <a class="botonver" href="./detalleCursos.html">Ver Curso</a>
-            </div>
-            <div class="curso">
-                <h2>Curso Maquillaje Avanzado</h2>
-                <img src="../assets/img/avanzado.jpeg" alt="Maquillaje avanzado">
-                <div class="parrafo">
-
-                    <p>Duracion: 5 Semanas</p>
-                    <p>Dificultad: Intermedio</p>
-                    <p>Precio: $50,00 USD</p>
-
-                </div>
-
-
-                <a class="botonver" href="./detalleCursos.html">Ver Curso</a>
-            </div>
-
-            <div class="curso">
-                <h2>Curso Colorimetria</h2>
-                <img src="../assets/img/colorimetria-img.jpg" alt="Colorimetria">
-                <div class="parrafo">
-                    <p>Duracion: 6 Semanas</p>
-                    <p>Dificultad: Intermedio</p>
-                    <p>Precio: $60,00 USD</p>
-                </div>
-
-                <a class="botonver" href="./detalleCursos.html">Ver Curso</a>
-            </div>
-
-        </section>
-
-    </main>
-
-    <footer>
-        <div class="footerRedes">
-            <a href="https://www.instagram.com/jackiemakeup94?igsh=NzVmYTMzNGpwZTBn" target="_blank"><i
-                    class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.youtube.com/@jackiemakeup94" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-            <a href="https://www.tiktok.com/@soyjackiemakeup?lang=es&is_from_webapp=1&sender_device=mobile&sender_web_id=7350078536651130374"
-                target="_blank"><i class="fa-brands fa-tiktok"></i></a>
-            <a href="https://www.threads.net/@jackiemakeup94" target="_blank"><i class="fa-brands fa-threads"></i></a>
-        </div>
-        <div class="footer-center">
-            <p>© 2025 JackieMakeUp. Todos los derechos reservados.</p>
-        </div>
+          <div class="col-12 col-md-4 text-center">
+            <p class="mb-0">© 2025 JackieMakeUp. Todos los derechos reservados.</p>
+          </div>
         <div>
             <img src="../assets/img/logo_footer.png" alt="Logo Footer">
         </div>
+
     </footer>
 
     <!-- Bootstrap -->

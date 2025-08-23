@@ -106,25 +106,49 @@ h1 {
 
 }
 
-.imagenes_index {
+/*.imagenes_index {
     display: flex;
-    justify-content: center; /* con este selector puedo centrar las imagenes Horizontalmente*/
-    align-items: center;/** este tambien las centra la diferencia con el de arriba es que que las centra verticalmente si es que hay altura*/
-    gap: 20px;          /* el espacio entre las imagennes*/
-    flex-wrap: wrap;    /* este selector es para que se acomoden en pantallas pequeñas */
+    justify-content: center; /* con este selector puedo centrar las imagenes Horizontalmente
+    align-items: center;/** este tambien las centra la diferencia con el de arriba es que que las centra verticalmente si es que hay altura
+    gap: 20px;          /* el espacio entre las imagennes
+    flex-wrap: wrap;    /* este selector es para que se acomoden en pantallas pequeñas 
     padding: 50px;
 
 }
 
-.imagenes_index img {
-    width: 50%; /* como las coloque arriba en un contenedor estas ocuparan el 30% o lo que le quiera colcoar*/
+/*.imagenes_index img {
+    width: 50%; /* como las coloque arriba en un contenedor estas ocuparan el 30% o lo que le quiera colcoar
     max-width: 300px;
     height: auto;
-    border-radius: 10px; /* coloca el borde de la imagen un poco redonda*/
-    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.555); /*este esta muy bueno le da sombra y como que esta sobre el aire */
+    border-radius: 10px; /* coloca el borde de la imagen un poco redonda
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.555); /*este esta muy bueno le da sombra y como que esta sobre el aire 
 
 
 
+}*/
+
+/*parte de las imagenes junto con bootstratp del INDEX*/
+.collage-card { 
+    width: clamp(240px, 28vw, 420px); 
+}
+.collage-center { 
+    width: clamp(260px, 32vw, 460px); 
+}
+.collage-left, .collage-right { 
+    width: clamp(220px, 26vw, 360px); 
+}
+
+/* Espaciado base en móvil */
+.collage { 
+    gap: 12px; 
+}
+
+/* Efecto superpuesto desde tablet */
+@media (min-width: 768px) {
+  .collage { gap: 0; }
+  .collage-left  { transform: translateY(12px);  z-index: 1; margin-right: -12px; }
+  .collage-center{ transform: translateY(-16px); z-index: 2; margin: 0 -12px; }
+  .collage-right { transform: translateY(24px);  z-index: 1; margin-left: -12px; }
 }
 
 

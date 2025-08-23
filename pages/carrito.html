@@ -18,29 +18,33 @@
 
 <body>
 
-    <header class="bg-light py-3 border-bottom">
+    <header class="navbar navbar-expand-md bg-light border-bottom">
         <div class="container d-flex justify-content-between aling-items-center">
             <a href="../index.html">
                 <img src="../assets/img/logo.png" alt="logoJQ" height="70">
             </a>
         </div>
 
-        <!-- solo icono del menu collapse, no entendi como hacerlo funcionar -->
-        <div class="d-block d-md-none">
-            <i class="fa-solid fa-bars fa-2x text-dark"></i>
-        </div>
+        <!-- menu hamburguesa -->
+        <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <nav class="d-none d-md-block">
-            <ul class="nav nav-tabs justify-content-center align-items-center gap-1 flex-nowrap px-2">
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto nav nav-tabs align-items-center align-items-md-center gap-1 flex-nowrap px-2">
                 <li class="nav-item"><a class="nav-link text-dark" href="../index.html">Inicio</a></li>
                 <li class="nav-item"><a class="nav-link text-dark" href="./cursos.html">Cursos</a></li>
-                <li class="nav-item"><a class="nav-link text-dark" href="./detalleCursos.html">Detalle Cursos</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="./detalleCursos.html">Detalle Cursos</a>
+                </li>
                 <li class="nav-item"><a class="nav-link text-dark" href="./sobreMi.html">Sobre Mi</a></li>
-                <li class="nav-item"><a class="nav-link active text-dark" href="./carrito.html">
-                        <i class="fa-solid fa-cart-shopping fa-sm"></i></a></li>
+                <li class="nav-item"><a class="nav-link active text-dark" href="./carrito.html"><i
+                            class="fa-solid fa-cart-shopping fa-sm"></i></a></li>
             </ul>
-        </nav>
+        </div>
     </header>
+
     <main class="conteiner mt-5 px-2 px-md-5">
         <section class="row g-4">
 
@@ -191,21 +195,49 @@
     </main>
 
 
-    <footer class="mt-5">
-        <div class="footerRedes">
-            <a href="https://www.instagram.com/jackiemakeup94?igsh=NzVmYTMzNGpwZTBn" target="_blank"><i
-                    class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.youtube.com/@jackiemakeup94" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-            <a href="https://www.tiktok.com/@soyjackiemakeup?lang=es&is_from_webapp=1&sender_device=mobile&sender_web_id=7350078536651130374"
-                target="_blank"><i class="fa-brands fa-tiktok"></i></a>
-            <a href="https://www.threads.net/@jackiemakeup94" target="_blank"><i class="fa-brands fa-threads"></i></a>
-        </div>
-        <div class="footer-center">
-            <p>© 2025 JackieMakeUp. Todos los derechos reservados.</p>
-        </div>
+    <footer class="bg-light border-top py-4">
+      <div class="container">
+        <div class="row align-items-center gy-3">
+          <div class="col-12 col-md-4">
+            <div class="d-flex gap-4 fs-4">
+              <a
+                href="https://www.instagram.com/jackiemakeup94?igsh=NzVmYTMzNGpwZTBn"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                class="text-dark"
+                ><i class="fa-brands fa-instagram"></i></a>
+              <a
+                href="https://www.youtube.com/@jackiemakeup94"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+                class="text-dark"
+                ><i class="fa-brands fa-youtube"></i></a>
+              <a
+                href="https://www.tiktok.com/@soyjackiemakeup?lang=es&is_from_webapp=1&sender_device=mobile&sender_web_id=7350078536651130374"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="TikTok"
+                class="text-dark"
+                ><i class="fa-brands fa-tiktok"></i></a>
+              <a
+                href="https://www.threads.net/@jackiemakeup94"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Threads"
+                class="text-dark"
+                ><i class="fa-brands fa-threads"></i></a>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4 text-center">
+            <p class="mb-0">© 2025 JackieMakeUp. Todos los derechos reservados.</p>
+          </div>
         <div>
             <img src="../assets/img/logo_footer.png" alt="Logo Footer">
         </div>
+
     </footer>
 
     <!-- Bootstrap -->

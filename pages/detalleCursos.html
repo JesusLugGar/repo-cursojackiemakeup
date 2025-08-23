@@ -18,20 +18,23 @@
 </head>
 
 <body>
-    <header class="bg-light py-3 border-bottom">
+
+    <header class="navbar navbar-expand-md bg-light border-bottom">
         <div class="container d-flex justify-content-between aling-items-center">
             <a href="../index.html">
                 <img src="../assets/img/logo.png" alt="logoJQ" height="70">
             </a>
         </div>
 
-        <!-- solo icono del menu collapse, no entendi como hacerlo funcionar -->
-        <div class="d-block d-md-none">
-            <i class="fa-solid fa-bars fa-2x text-dark"></i>
-        </div>
+        <!-- menu hamburguesa -->
+        <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <nav class="d-none d-md-block">
-            <ul class="nav nav-tabs justify-content-center align-items-center gap-1 flex-nowrap px-2">
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto nav nav-tabs align-items-center align-items-md-center gap-1 flex-nowrap px-2">
                 <li class="nav-item"><a class="nav-link text-dark" href="../index.html">Inicio</a></li>
                 <li class="nav-item"><a class="nav-link text-dark" href="./cursos.html">Cursos</a></li>
                 <li class="nav-item"><a class="nav-link active text-dark" href="./detalleCursos.html">Detalle Cursos</a>
@@ -40,69 +43,81 @@
                 <li class="nav-item"><a class="nav-link text-dark" href="./carrito.html"><i
                             class="fa-solid fa-cart-shopping fa-sm"></i></a></li>
             </ul>
-        </nav>
+        </div>
     </header>
-    <main class="container py-5">
-        <h1 class="text-center mb-4">Del inicio a la Perfección</h1>
-        <p class="text-center mb-5 fs-5">Aprende con nosotros el Arte del Maquillaje</p>
-        <section>
 
-            <div class="card p-4 shadow border-0"> <!-- el shodow de Boostrapt deja el CARD como elevado p=padding-->
-                <div class="row g-4">
+<main class="container py-5">
+  <h1 class="text-center mb-2">Del inicio a la Perfección</h1>
+  <p class="text-center mb-4 fs-5">Aprende con nosotros el Arte del Maquillaje</p>
 
-                    <div class="col-md-6">
-                        <img src="../assets/img/automaquillaje.jpg" alt="Jackie automaquillaje"
-                            class="img-fluid rounded">
-                    </div>
+  <section>
+    <div class="card shadow border-0 p-3 p-md-4">
+      <div class="row g-4 align-items-center">
 
-                    <div class="col-md-6">
+        <div class="col-12 col-md-6">
+          <img src="../assets/img/automaquillaje.jpg"
+               alt="Jackie automaquillaje"
+               class="img-fluid w-100 rounded-3"
+               loading="lazy">
+        </div>
 
-                        <h2>Curso Auto Maquillaje</h2>
-                        <p class="fs-5 parrafoCurso">Con este curso de Auto-Maquillaje, no solo aprenderas a
-                            maquillarte, sino que
-                            tambien descubriras
-                            el poder transformador
-                            del maquillaje y como puede elevar tu confianza y autoestima en cualquier situación.</p>
-                        <p class="fw-bold fs-5">Precio: $36,00 USD</p>
+        
+        <div class="col-12 col-md-6 text-center text-md-start">
+          <h2 class="mb-2">Curso Auto Maquillaje</h2>
+          <p class="fs-5 mb-2">
+            Con este curso de Auto-Maquillaje, no solo aprenderás a maquillarte,
+            sino que también descubrirás el poder transformador del maquillaje
+            y cómo puede elevar tu confianza y autoestima en cualquier situación.
+          </p>
+          <p class="fw-bold fs-5 mb-3">Precio: $36,00 USD</p>
+          <a href="./carrito.html" class="btn btn-dark mt-1">Comprar Curso</a>
+        </div>
 
-                        <a href="./carrito.html" class="btn btn-dark mt-3">Comprar Curso</a>
+        <div class="col-12"><hr class="my-4"></div>
 
-                    </div>
+        
+        <div class="col-12 col-md-6">
+          <h3 class="text-center text-md-start">Modalidad</h3>
+          <h4 class="mb-2 text-center text-md-start">Clases online en vivo</h4>
+          <p class="mb-3 text-center text-md-start">
+            Clases en vivo cada semana con Profe Jackie donde aprenderás de forma práctica
+            y se aclararán todas tus dudas.
+          </p>
+          <img src="../assets/img/foto_online_clases.jpg"
+               alt="Clases en vivo"
+               class="img-fluid w-100 rounded-3"
+               loading="lazy">
+        </div>
 
-                    <div class="col-12">
-                        <hr>
-                    </div>
+        <!-- video responsive -->
+        <div class="col-12 col-md-6">
+          <h3 class="text-center text-md-start">Contenido on Demand</h3>
+          <p class="text-center text-md-start">
+            Accede a videos y una guía para que pongas en práctica lo aprendido.
+          </p>
+          <div class="ratio ratio-16x9 rounded-3 overflow-hidden">
+            <video src="../assets/videos/publicidad_corto.mp4"
+                   controls playsinline preload="metadata"
+                   class="w-100 h-100">
+              Tu navegador no soporta el video HTML5.
+            </video>
+          </div>
+        </div>
 
-                    <div class="col-md-6 p-3">
-                        <h3 class="text-center">Modalidad</h3>
-                        <h4>Clases online en Vivo</h4>
-                        <p>Clases en vivo cada semana con Profe Jackie donde aprenderas de forma practica y se aclararan
-                            todas tus dudas</p>
-                        <img src="../assets/img/foto_online_clases.jpg" alt="Clases en vivo" class="img-fluid rounded">
-                    </div>
+        <div class="col-12"><hr class="my-5"></div>
 
-                    <div class="col-md-6">
-                        <h3 class="text-center">Contenido on Demand</h3>
-                        <p class="text-center">Accede a videos y una guia para que pongas en pratica lo aprendido</p>
-                        <div class="text-center">
-                            <video src="../assets/videos/publicidad_corto.mp4" controls class="rounded"
-                                style="max-width: 400px; width: 100%; height: 500px; object-fit: cover;">Video
-                                Auto-Maquillaje</video>
-                        </div>
-                    </div>
-
-                    <div class="col-12">
-                        <hr>
-                    </div>
-
-
-                    <div class="col-12 text-center mt-5 pt-3">
-                        <h3>Certificado que obtendras</h3>
-                        <img src="../assets/img/certificado.jpg" alt="certificado_img"
-                            class="img-fluid rounded certificado p-5" style="max-width: 500px;">
-                    </div>
-                </div>
-            </div>
+        <!-- Certificado -->
+        <div class="col-12 text-center">
+          <h3 class="mb-3">Certificado que obtendrás</h3>
+          <img src="../assets/img/certificado.jpg"
+               alt="Certificado de finalización"
+               class="img-fluid rounded-3 mx-auto d-block"
+               loading="lazy" style="max-width: 500px;">
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
             <!--
 
@@ -151,23 +166,51 @@ Para todo este espacio no tengo una idea clara de que material colocar aun.
             </fieldset>-->
 
 
-    </main>
+   
 
-    <footer>
-        <div class="footerRedes">
-            <a href="https://www.instagram.com/jackiemakeup94?igsh=NzVmYTMzNGpwZTBn" target="_blank"><i
-                    class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.youtube.com/@jackiemakeup94" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-            <a href="https://www.tiktok.com/@soyjackiemakeup?lang=es&is_from_webapp=1&sender_device=mobile&sender_web_id=7350078536651130374"
-                target="_blank"><i class="fa-brands fa-tiktok"></i></a>
-            <a href="https://www.threads.net/@jackiemakeup94" target="_blank"><i class="fa-brands fa-threads"></i></a>
-        </div>
-        <div class="footer-center">
-            <p>© 2025 JackieMakeUp. Todos los derechos reservados.</p>
-        </div>
+     <footer class="bg-light border-top py-4">
+      <div class="container">
+        <div class="row align-items-center gy-3">
+          <div class="col-12 col-md-4">
+            <div class="d-flex gap-4 fs-4">
+              <a
+                href="https://www.instagram.com/jackiemakeup94?igsh=NzVmYTMzNGpwZTBn"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                class="text-dark"
+                ><i class="fa-brands fa-instagram"></i></a>
+              <a
+                href="https://www.youtube.com/@jackiemakeup94"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+                class="text-dark"
+                ><i class="fa-brands fa-youtube"></i></a>
+              <a
+                href="https://www.tiktok.com/@soyjackiemakeup?lang=es&is_from_webapp=1&sender_device=mobile&sender_web_id=7350078536651130374"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="TikTok"
+                class="text-dark"
+                ><i class="fa-brands fa-tiktok"></i></a>
+              <a
+                href="https://www.threads.net/@jackiemakeup94"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Threads"
+                class="text-dark"
+                ><i class="fa-brands fa-threads"></i></a>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4 text-center">
+            <p class="mb-0">© 2025 JackieMakeUp. Todos los derechos reservados.</p>
+          </div>
         <div>
             <img src="../assets/img/logo_footer.png" alt="Logo Footer">
         </div>
+
     </footer>
 
     <!-- Bootstrap -->
