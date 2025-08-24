@@ -21,17 +21,18 @@
 
     <header class="navbar navbar-expand-md bg-light border-bottom">
         <div class="container d-flex justify-content-between aling-items-center">
-            <a href="../index.html">
+
+            <!-- menu hamburguesa -->
+            <button class="navbar-toggler d-md-none order-3 ms-auto" type="button" data-bs-toggle="collapse"
+                data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <a href="../index.html" class="navbar-brand order-1">
                 <img src="../assets/img/logo.png" alt="logoJQ" height="70">
             </a>
         </div>
-
-        <!-- menu hamburguesa -->
-        <button class="navbar-toggler" type="button"
-              data-bs-toggle="collapse" data-bs-target="#mainNav"
-              aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menú">
-        <span class="navbar-toggler-icon"></span>
-      </button>
 
         <div class="collapse navbar-collapse" id="mainNav">
             <ul class="navbar-nav ms-auto nav nav-tabs align-items-center align-items-md-center gap-1 flex-nowrap px-2">
@@ -46,80 +47,77 @@
         </div>
     </header>
 
-<main class="container py-5">
-  <h1 class="text-center mb-2">Del inicio a la Perfección</h1>
-  <p class="text-center mb-4 fs-5">Aprende con nosotros el Arte del Maquillaje</p>
+    <main class="container py-5">
+        <h1 class="text-center mb-2">Del inicio a la Perfección</h1>
+        <p class="text-center mb-4 fs-5">Aprende con nosotros el Arte del Maquillaje</p>
 
-  <section>
-    <div class="card shadow border-0 p-3 p-md-4">
-      <div class="row g-4 align-items-center">
+        <section>
+            <div class="card shadow border-0 p-3 p-md-4">
+                <div class="row g-4 align-items-center">
 
-        <div class="col-12 col-md-6">
-          <img src="../assets/img/automaquillaje.jpg"
-               alt="Jackie automaquillaje"
-               class="img-fluid w-100 rounded-3"
-               loading="lazy">
-        </div>
+                    <div class="col-12 col-md-6">
+                        <img src="../assets/img/automaquillaje.jpg" alt="Jackie automaquillaje"
+                            class="img-fluid w-100 rounded-3" loading="lazy">
+                    </div>
 
-        
-        <div class="col-12 col-md-6 text-center text-md-start">
-          <h2 class="mb-2">Curso Auto Maquillaje</h2>
-          <p class="fs-5 mb-2">
-            Con este curso de Auto-Maquillaje, no solo aprenderás a maquillarte,
-            sino que también descubrirás el poder transformador del maquillaje
-            y cómo puede elevar tu confianza y autoestima en cualquier situación.
-          </p>
-          <p class="fw-bold fs-5 mb-3">Precio: $36,00 USD</p>
-          <a href="./carrito.html" class="btn btn-dark mt-1">Comprar Curso</a>
-        </div>
 
-        <div class="col-12"><hr class="my-4"></div>
+                    <div class="col-12 col-md-6 text-center text-md-start">
+                        <h2 class="mb-2">Curso Auto Maquillaje</h2>
+                        <p class="fs-5 mb-2">
+                            Con este curso de Auto-Maquillaje, no solo aprenderás a maquillarte,
+                            sino que también descubrirás el poder transformador del maquillaje
+                            y cómo puede elevar tu confianza y autoestima en cualquier situación.
+                        </p>
+                        <p class="fw-bold fs-5 mb-3">Precio: $36,00 USD</p>
+                        <a href="./carrito.html" class="btn btn-dark mt-1">Comprar Curso</a>
+                    </div>
 
-        
-        <div class="col-12 col-md-6">
-          <h3 class="text-center text-md-start">Modalidad</h3>
-          <h4 class="mb-2 text-center text-md-start">Clases online en vivo</h4>
-          <p class="mb-3 text-center text-md-start">
-            Clases en vivo cada semana con Profe Jackie donde aprenderás de forma práctica
-            y se aclararán todas tus dudas.
-          </p>
-          <img src="../assets/img/foto_online_clases.jpg"
-               alt="Clases en vivo"
-               class="img-fluid w-100 rounded-3"
-               loading="lazy">
-        </div>
+                    <div class="col-12">
+                        <hr class="my-4">
+                    </div>
 
-        <!-- video responsive -->
-        <div class="col-12 col-md-6">
-          <h3 class="text-center text-md-start">Contenido on Demand</h3>
-          <p class="text-center text-md-start">
-            Accede a videos y una guía para que pongas en práctica lo aprendido.
-          </p>
-          <div class="ratio ratio-16x9 rounded-3 overflow-hidden">
-            <video src="../assets/videos/publicidad_corto.mp4"
-                   controls playsinline preload="metadata"
-                   class="w-100 h-100">
-              Tu navegador no soporta el video HTML5.
-            </video>
-          </div>
-        </div>
 
-        <div class="col-12"><hr class="my-5"></div>
+                    <div class="col-12 col-md-6">
+                        <h3 class="text-center text-md-start">Modalidad</h3>
+                        <h4 class="mb-2 text-center text-md-start">Clases online en vivo</h4>
+                        <p class="mb-3 text-center text-md-start">
+                            Clases en vivo cada semana con Profe Jackie donde aprenderás de forma práctica
+                            y se aclararán todas tus dudas.
+                        </p>
+                        <img src="../assets/img/foto_online_clases.jpg" alt="Clases en vivo"
+                            class="img-fluid w-100 rounded-3" loading="lazy">
+                    </div>
 
-        <!-- Certificado -->
-        <div class="col-12 text-center">
-          <h3 class="mb-3">Certificado que obtendrás</h3>
-          <img src="../assets/img/certificado.jpg"
-               alt="Certificado de finalización"
-               class="img-fluid rounded-3 mx-auto d-block"
-               loading="lazy" style="max-width: 500px;">
-        </div>
-      </div>
-    </div>
-  </section>
-</main>
+                    <!-- video responsive -->
+                    <div class="col-12 col-md-6">
+                        <h3 class="text-center text-md-start">Contenido on Demand</h3>
+                        <p class="text-center text-md-start">
+                            Accede a videos y una guía para que pongas en práctica lo aprendido.
+                        </p>
+                        <div class="ratio ratio-16x9 rounded-3 overflow-hidden">
+                            <video src="../assets/videos/publicidad_corto.mp4" controls playsinline preload="metadata"
+                                class="w-100 h-100">
+                                Tu navegador no soporta el video HTML5.
+                            </video>
+                        </div>
+                    </div>
 
-            <!--
+                    <div class="col-12">
+                        <hr class="my-5">
+                    </div>
+
+                    <!-- Certificado -->
+                    <div class="col-12 text-center">
+                        <h3 class="mb-3">Certificado que obtendrás</h3>
+                        <img src="../assets/img/certificado.jpg" alt="Certificado de finalización"
+                            class="img-fluid rounded-3 mx-auto d-block" loading="lazy" style="max-width: 500px;">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--
 
 Para todo este espacio no tengo una idea clara de que material colocar aun.
 
@@ -166,50 +164,32 @@ Para todo este espacio no tengo una idea clara de que material colocar aun.
             </fieldset>-->
 
 
-   
 
-     <footer class="bg-light border-top py-4">
-      <div class="container">
-        <div class="row align-items-center gy-3">
-          <div class="col-12 col-md-4">
-            <div class="d-flex gap-4 fs-4">
-              <a
-                href="https://www.instagram.com/jackiemakeup94?igsh=NzVmYTMzNGpwZTBn"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                class="text-dark"
-                ><i class="fa-brands fa-instagram"></i></a>
-              <a
-                href="https://www.youtube.com/@jackiemakeup94"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="YouTube"
-                class="text-dark"
-                ><i class="fa-brands fa-youtube"></i></a>
-              <a
-                href="https://www.tiktok.com/@soyjackiemakeup?lang=es&is_from_webapp=1&sender_device=mobile&sender_web_id=7350078536651130374"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="TikTok"
-                class="text-dark"
-                ><i class="fa-brands fa-tiktok"></i></a>
-              <a
-                href="https://www.threads.net/@jackiemakeup94"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Threads"
-                class="text-dark"
-                ><i class="fa-brands fa-threads"></i></a>
-            </div>
-          </div>
 
-          <div class="col-12 col-md-4 text-center">
-            <p class="mb-0">© 2025 JackieMakeUp. Todos los derechos reservados.</p>
-          </div>
-        <div>
-            <img src="../assets/img/logo_footer.png" alt="Logo Footer">
-        </div>
+    <footer class="bg-light border-top py-4">
+        <div class="container">
+            <div class="row align-items-center gy-3">
+                <div class="col-12 col-md-4">
+                    <div class="d-flex gap-4 fs-4">
+                        <a href="https://www.instagram.com/jackiemakeup94?igsh=NzVmYTMzNGpwZTBn" target="_blank"
+                            rel="noopener noreferrer" aria-label="Instagram" class="text-dark"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@jackiemakeup94" target="_blank" rel="noopener noreferrer"
+                            aria-label="YouTube" class="text-dark"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.tiktok.com/@soyjackiemakeup?lang=es&is_from_webapp=1&sender_device=mobile&sender_web_id=7350078536651130374"
+                            target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="text-dark"><i
+                                class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://www.threads.net/@jackiemakeup94" target="_blank" rel="noopener noreferrer"
+                            aria-label="Threads" class="text-dark"><i class="fa-brands fa-threads"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 text-center">
+                    <p class="mb-0">© 2025 JackieMakeUp. Todos los derechos reservados.</p>
+                </div>
+                <div>
+                    <img src="../assets/img/logo_footer.png" alt="Logo Footer">
+                </div>
 
     </footer>
 
