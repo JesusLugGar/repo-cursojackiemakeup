@@ -1,0 +1,33 @@
+
+// las letras o tipografias
+$font-body: 'Open Sans', sans-serif;
+$font-heading: 'Montserrat',sans-serif;
+$font-firma: 'Great Vibes', cursive;
+
+//distintos colores -- abrevio backgroud bg
+$color-text: #444444;
+$color-link: #000000;
+$color-header-bg: #f5f5f5;
+$color-logo-bg: #f8f0f4;
+$color-border: #1e3a8a;
+$color-card-bg: #f9f9f9;
+$color-gradient: #c65f87;
+
+//sombras
+$shadow-100: 0 2px 4px rgba(0,0,0,0.05);
+$shadow-200: 0 4px 10px rgba(0,0,0,0.10);
+
+//variable de borde
+$radius-10: 10px;
+
+//para media
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+
+
+

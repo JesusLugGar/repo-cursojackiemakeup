@@ -1,0 +1,33 @@
+@use 'variables' as *;
+
+footer {
+  position: relative;
+
+  img {
+    position: absolute;
+    left: 45%;
+    transform: translateX(-50%);
+    width: 50%;
+    opacity: .3;
+    filter: blur(1px);
+    z-index: 0;
+  }
+
+  .footerRedes,
+  .footer-center {
+    position: relative;
+    z-index: 1;
+  }
+
+  .footerRedes {
+    margin: 10px auto;
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 20%;
+  }
+
+  .fa-brands { font-size: 20px; }
+
+  .footer-center { text-align: center; }
+}

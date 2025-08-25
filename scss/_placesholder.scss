@@ -1,0 +1,16 @@
+@use 'variables' as *;
+
+
+// Superficie tipo card
+%card-surface {
+  background-color: $color-card-bg;
+  border: 1px solid $color-border;
+  border-radius: $radius-10;
+  box-shadow: $shadow-200;
+}
+
+// Texto de encabezado
+%heading-shared {
+  font-family: $font-heading;
+  color: $color-text;
+}

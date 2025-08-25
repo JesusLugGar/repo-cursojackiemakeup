@@ -1,0 +1,13 @@
+@use 'variables' as *;
+
+.logo {
+  width: 115px;
+  height: auto;
+  background-color: $color-logo-bg;
+  border-radius: 90%;
+  padding: 1px;
+
+  img { 
+    width: 100%; 
+    }
+}

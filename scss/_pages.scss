@@ -1,0 +1,119 @@
+@use 'variables' as *;
+@use 'mixin' as *;
+@use 'placesholder';
+
+
+
+ /////7 CURSOS CURSOS
+.gridArea {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 80px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  // Responsive: 1 col en pantallas angostas
+  @include respond(sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 575.98px) {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+// Tarjeta curso
+.curso {
+  @extend %card-surface;
+  padding: 15px;
+  text-align: center;
+  transition: transform .2s ease;
+
+  &:hover { transform: translateY(-2px); }
+
+  img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+  }
+
+  h2 {
+    @extend %heading-shared;
+    font-size: 1.25rem;
+    font-style: italic;
+  }
+
+  .parrafo {
+    p {
+      display: flex;
+      justify-content: space-between;
+      text-align: left;
+      font-size: 16px;
+      line-height: 2.6;
+      margin: 10px 0;
+    }
+  }
+}
+
+// Botón "Ver curso"
+.botonver {
+  display: block;
+  width: 90%;
+  margin: 10px auto 16px;
+  padding: 10px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color .3s ease;
+
+  &:hover { background-color: rgba(0,0,0,.6); }
+}
+
+
+
+////// DETALLE CURSO
+
+.parrafoCurso {
+  display: flex;
+  text-align: justify;
+  line-height: 1.5;
+  margin: 50px 0;
+}
+
+.certificado {
+  &:hover { transform: scale(1.07); }
+}
+
+
+/// CARRITO
+ 
+.terminosCondiciones {
+  font-size: small;
+  text-align: center;
+}
+
+.negrita {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+
+///Sobre mi
+
+.firma {
+    font-family: $font-firma, cursive;
+    font-size: 1.3rem;
+    font-style: italic;
+
+}
+
+
+.sobreMi {
+    text-align: justify;
+    line-height: 1.6; /*esto para dejar espacio entre linea tipo word*/
+    
+}
