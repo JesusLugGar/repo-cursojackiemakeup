@@ -2,11 +2,42 @@
 @use 'mixin' as *;
 @use 'placesholder';
 
-body {
+/*body {
   font-family: $font-body;
   font-weight: 400;
   color: $color-text;
+}*/
+
+
+$brand-rose:  #E6A1B5 !default;   // rosa del logo (aprox)
+$brand-mauve: #C3A1B5 !default;   // malva suave
+$brand-gray:  #6E7381 !default;   // gris del logo
+
+/* Intensidad general del fondo de página (ajústala si lo quieres más/menos visible) */
+$bg-intensity-1: .35;  // focos principales
+$bg-intensity-2: .06;  // focos de apoyo
+$bg-veil:        .04;  // velo lineal muy sutil
+
+
+body {
+  background:
+    radial-gradient(900px 420px at 8% 10%,   rgba($brand-rose,  $bg-intensity-1), transparent 60%),
+    radial-gradient(780px 380px at 92% 14%,  rgba($brand-mauve, $bg-intensity-1), transparent 65%),
+    radial-gradient(820px 420px at 50% 115%, rgba($brand-rose,  $bg-intensity-2), transparent 60%),
+    linear-gradient(180deg, rgba($brand-mauve, $bg-veil), rgba(#ffffff,0) 38%),
+    #ffffff;
+
+  background-attachment: fixed, fixed, fixed, scroll, scroll;
+  background-repeat: no-repeat;
+  background-color: #ffffff; // fallback
 }
+
+
+main {
+  position: relative;
+  z-index: 0;
+}
+
 
 h1, h2 {
   @extend %heading-shared;
@@ -24,8 +55,7 @@ h1 {
   @include gradient-text($color-gradient);
 }
 
-/// cosas del header
-/// 
+/*
 header {
   @include flex-center(space-between, center);
   position: sticky;
@@ -54,4 +84,61 @@ header {
       }
     }
   }
+}*/
+
+
+/*  variables directas aca solo para el header  */
+$brand-rose:  #E6A1B5 !default; // rosa del logo (aprox)
+$brand-mauve: #C3A1B5 !default;
+$brand-gray:  #6E7381 !default; // gris del logo
+
+/*  Header con degradado suave  */
+
+header.navbar.sticky-top {
+  position: sticky !important;
+  top: 0;
+  z-index: 1030;            /* por encima del contenido */
 }
+
+header.navbar {
+  position: relative;
+  isolation: isolate;
+  //background: transparent !important; 
+  border-bottom: 1px solid rgba($brand-gray, .12);
+}
+
+/* Lienzo del degradado */
+header.navbar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  
+  background:
+    radial-gradient(600px 280px at 8% 35%,  rgba($brand-rose, .20), transparent 60%),
+    radial-gradient(520px 240px at 88% 15%, rgba($brand-mauve, .20), transparent 65%),
+    linear-gradient(180deg, rgba($brand-rose, .08), rgba(#ffffff, 0) 70%);
+
+ 
+}
+
+
+header.navbar .nav-tabs .nav-link {
+  border: 0;
+  border-radius: .75rem;
+  color: $brand-gray;
+  transition: background .25s ease, color .25s ease, box-shadow .25s ease;
+}
+
+header.navbar .nav-tabs .nav-link:hover {
+  background: linear-gradient(135deg, rgba($brand-rose,.18), rgba($brand-mauve,.18));
+  color: #2a2a2a;
+}
+
+header.navbar .nav-tabs .nav-link.active {
+  color: #fff !important;
+  background: linear-gradient(135deg, $brand-rose, $brand-mauve);
+  box-shadow: 0 8px 18px rgba($brand-mauve,.35);
+}
+
