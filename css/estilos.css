@@ -176,6 +176,27 @@ footer .footer-center {
   text-align: center;
 }
 
+.whatsapp-float {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25D366;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1050;
+  transition: transform 0.15s ease;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-2px);
+}
+
 .collage-card {
   width: clamp(240px, 28vw, 420px);
 }
