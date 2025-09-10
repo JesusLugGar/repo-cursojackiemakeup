@@ -1,12 +1,15 @@
 # JackieMakeUp
 
-<<<<<<< HEAD
-Sitio web de cursos de maquillaje (HTML + Bootstrap 5 + Sass).
+URL PARA VERCEL GRATIUTO 
+https://jackiemakeup.vercel.app/
+
+ HEAD
+Sitio web de cursos de maquillaje (HTML + Bootstrap 5 + Sass + SS).
 =======
 Sitio web de cursos de maquillaje (HTML + Bootstrap 5 + Sass). Programacion Web.
->>>>>>> f9e8c55 (add backgroud body, color in header, changing menu, animate Index)
+(add backgroud body, color in header, changing menu, animate Index)
 
-![Logo](./assets/img/logo.png)
+![Logo](./assets/img/logo_footer.png)
 
 ## ✨ Features
 - Navbar responsive con collapse (hamburguesa)
